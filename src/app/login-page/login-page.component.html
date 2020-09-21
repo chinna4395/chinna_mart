@@ -1,0 +1,45 @@
+<div class="container login-page">
+                    <form class="text-center border border-light p-5" [formGroup]="profileForm" (ngSubmit)="loginSubmit(profileForm)">
+                   
+
+                        <p class="h4 mb-4">Sign in</p>
+
+                        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email">
+                        <small id="emailRegisterFormemail" class="form-text text-muted" 
+                               *ngIf="profileForm.controls.email.touched && profileForm.controls.email.errors?.required">
+                                                Please enter email...
+                        </small>
+                        
+                        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" formControlName="pswd">
+                        <small id="emailRegisterFormPassword" class="form-text text-muted" 
+                               *ngIf="profileForm.controls.pswd.touched && profileForm.controls.pswd.errors?.required">
+                                                Please enter Password...
+                        </small>
+
+                        <small id="emailRegisterFormemailerror" class="form-text text-danger" 
+                               *ngIf="errormessage">
+                                                {{errormessage}}
+                        </small>
+
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember" formControlName='remember'>
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info btn-block my-4" type="submit" [disabled]="!profileForm.valid">Sign in</button>
+
+                        <p>Not a member?
+                            <a href="/signup">Sign Up</a>
+                        </p>
+
+        </form>
+
+
+
+
+                        
+</div>

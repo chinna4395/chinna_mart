@@ -1,0 +1,8 @@
+.login-page{
+    width: 30%;
+    margin: auto;
+}
+.border-light {
+    border-color: #bec2c6 !important;
+    border-radius: 5px;
+}

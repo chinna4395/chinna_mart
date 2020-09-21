@@ -1,0 +1,37 @@
+<div class="container login-page">
+    <form class="text-center border border-light p-5" [formGroup]="profileForm" (ngSubmit)="loginSubmit(profileForm)">
+
+        <p class="h4 mb-4">Sign Up</p>
+
+        <input type="text" id="defaultLoginFormname" class="form-control mb-4" placeholder="Enter Name" formControlName="name">
+        <small id="emailRegisterFormname" class="form-text text-muted" 
+               *ngIf="profileForm.controls.name.touched && profileForm.controls.name.errors?.required">
+                                Please enter name...
+        </small>
+        
+        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="email">
+        <small id="emailRegisterFormemail" class="form-text text-muted" 
+               *ngIf="profileForm.controls.email.touched && profileForm.controls.email.errors?.required">
+                                Please enter email...
+        </small>
+        
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" formControlName="pswd">
+        <small id="emailRegisterFormPassword" class="form-text text-muted" 
+               *ngIf="profileForm.controls.pswd.touched && profileForm.controls.pswd.errors?.required">
+                                Please enter Password...
+        </small>
+        
+        <small id="emailRegisterFormemails" class="form-text text-danger" 
+               *ngIf="errormessage">
+                                {{errormessage}}
+        </small>
+
+        <button class="btn btn-info btn-block my-4" type="submit" [disabled]="!profileForm.valid">Sign Up</button>
+
+        <p>Already Sigin Please Sign in?
+            <a href="/signup">Sign In</a>
+        </p>
+
+    </form>
+    
+</div>

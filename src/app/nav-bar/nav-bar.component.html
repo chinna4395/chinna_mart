@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dasboard">
+        <img src="./../../assets/Sandisk-Logo-170x96.png" class="img-fluid" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">DASHBOARD </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user-management">USER MANAGEMENT</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button> &nbsp; -->
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="button" routerLink="/login">Log In</button> &nbsp; &nbsp;
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="logOutProcess($event)">Log Out</button>
+      </div>
+    </div>
+</nav>
+
